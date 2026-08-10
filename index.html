@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodTrust</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="splash">
+  <div class="logo">🛡️🍴</div>
+  <h1>FoodTrust</h1>
+  <p>Don't just choose a restaurant. Know what you're choosing.</p>
+</div>
+
+<header>
+  <div class="brand">🛡️🍴 FoodTrust</div>
+  <nav>
+    <button onclick="showPage('home')">Home</button>
+    <button onclick="showPage('explore')">Explore</button>
+    <button onclick="showPage('compare')">Compare</button>
+    <button onclick="showPage('waste')">Food Waste</button>
+  </nav>
+</header>
+
+<main>
+
+<section id="home" class="page">
+  <div class="hero">
+    <h1>Find food with confidence.</h1>
+    <p>Discover restaurants using transparency, safety information and evidence.</p>
+
+    <input
+      id="search"
+      type="text"
+      placeholder="Search restaurants, food or locations..."
+      onkeyup="searchRestaurants()"
+    />
+  </div>
+
+  <h2>Restaurants Near You</h2>
+  <div id="restaurantList" class="grid"></div>
+</section>
+
+<section id="explore" class="page hidden">
+  <h1>Explore Restaurants</h1>
+  <div id="exploreList" class="grid"></div>
+</section>
+
+<section id="compare" class="page hidden">
+  <h1>Compare Restaurants</h1>
+  <p>Select restaurants from the list and compare their information.</p>
+
+  <div id="comparison"></div>
+</section>
+
+<section id="waste" class="page hidden">
+  <h1>Food Waste Intelligence</h1>
+
+  <div class="dashboard">
+    <div class="stat">
+      <h3>Food Prepared</h3>
+      <strong>52 kg</strong>
+    </div>
+
+    <div class="stat">
+      <h3>Food Sold</h3>
+      <strong>41 kg</strong>
+    </div>
+
+    <div class="stat">
+      <h3>Food Waste</h3>
+      <strong>8.2 kg</strong>
+    </div>
+
+    <div class="stat">
+      <h3>Waste Reduction</h3>
+      <strong>18%</strong>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>AI Suggestion</h2>
+    <p>
+      Track frequently wasted dishes and adjust preparation quantities
+      during low-demand periods.
+    </p>
+  </div>
+</section>
+
+<section id="profile" class="page hidden">
+  <div id="profileContent"></div>
+</section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+  </html>
